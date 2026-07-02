@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.container {
+  display: grid;
+  grid-template: repeat(3, 150px) / repeat(4, 1fr);
+  gap: 5px;
+}
+/* SPAN : quando o valor é 1, ele expande por UM espaco de grid, quando o valor é 2, ele expande por DOIS espaços de grid, e assim por diante. */
+/* EXEMPLO DE SHORTHAND GRID-AREA : grid-area: 1 (grid-row-start) / 2 (grid-column-start) / 3 (grid-row-end) / 4 (grid-column-end); */
+
+.caixa1 {
+  background-color: red;
+  grid-area: 1 / 1 / span 1 / span 4;
+  /* grid-row: 1 PRIMEIRO / span 1 TERCEIRO;
+  grid-column: 1 SEGUNDO / span 4 QUARTO; */
+}
+
+.caixa2 {
+  background-color: green;
+  grid-area: 2 / 1 / span 2 / span 2;
+  /* grid-row: 2 PRIMEIRO / span 2 TERCEIRO;
+  grid-column: 1 SEGUNDO / span 2 QUARTO; */
+}
+
+.caixa3 {
+  background-color: blue;
+  grid-area: 2 / 3 / span 2 / span 2;
+  /* grid-row: 2 PRIMEIRO / span 2 TERCEIRO;
+  grid-column: 3 SEGUNDO / span 2 QUARTO; */
+}
